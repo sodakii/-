@@ -138,6 +138,57 @@ $.fn.serializeObject = function () {
     });
     return o;
 };
+
+
 // 8.表单清空 
 // 清空表单 （“addGoodsForm”是表单的id）
 $("#addGoodsForm")[0].reset();
+
+
+
+//8.数组内相加
+/**
+ * 数组内相加
+ * @author 黄昕
+ * @date 2019/10/23
+ */
+function sum(arr) {
+    var len = arr.length;
+    if (len == 0) {
+        return 0;
+    } else if (len == 1) {
+        return arr[0];
+    } else {
+        return myFixed(arr[0] + sum(arr.slice(1)), 2); //与js精确算法连用 
+    }
+}
+/**
+ * js精确算法
+ * @author 黄昕
+ * @date 2019/10/23
+ */
+function myFixed(a, b) {
+    return Math.round(a * Math.pow(10, b)) / Math.pow(10, b);
+}
+myFixed(a + b, 2) //使用方法
+
+
+//10.数组去重
+/**
+ * 数组去重
+ * @author 黄昕
+ * @date 2019/10/23
+ */
+function arrayNonRepeatfy(arr) {
+    let map = new Map();
+    let array = new Array();  // 数组用于返回结果
+    for (let i = 0; i < arr.length; i++) {
+        if (map.has(arr[i])) {  // 如果有该key值
+            map.set(arr[i], true);
+        } else {
+            map.set(arr[i], false);   // 如果没有该key值
+            array.push(arr[i]);
+        }
+    }
+    return array;
+}
