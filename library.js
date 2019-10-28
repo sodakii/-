@@ -192,3 +192,5 @@ function arrayNonRepeatfy(arr) {
     }
     return array;
 }
+
+//11.vs code 好用插件整理 https://www.jianshu.com/p/fd945e8e099d
