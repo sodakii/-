@@ -196,7 +196,15 @@ function arrayNonRepeatfy(arr) {
 //11.vs code 好用插件整理 https://www.jianshu.com/p/fd945e8e099d
 
 //12. 跳转网页并取值
-window.open('url?id=13&name=张三') //跳转
+//跳转
+window.open('url?id=13&name=张三')
+// function openNewPageWindow(url) {
+//     let scrWidth = screen.availWidth; 
+//     let scrHeight = screen.availHeight;
+//     let self = window.open(url, "", "toolbar=no,scrollbars=yes,resizable=yes,location=no,status=no");
+//     self.moveTo(0, 0);
+//     self.resizeTo(scrWidth, scrHeight);
+// }
 // 取值
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
