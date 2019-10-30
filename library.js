@@ -194,3 +194,17 @@ function arrayNonRepeatfy(arr) {
 }
 
 //11.vs code 好用插件整理 https://www.jianshu.com/p/fd945e8e099d
+
+//12. 跳转网页并取值
+window.open('url?id=13&name=张三') //跳转
+// 取值
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) { return pair[1]; }
+    }
+    return (false);
+}
+getQueryVariable("id")
