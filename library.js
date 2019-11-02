@@ -216,3 +216,7 @@ function getQueryVariable(variable) {
     return (false);
 }
 getQueryVariable("id")
+
+//子页面刷新父页面
+window.opener.location.reload();
+
